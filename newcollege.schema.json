@@ -1,0 +1,53 @@
+{
+  "title": "NewCollege",
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "開設予定大学等": {
+      "type": "string"
+    },
+    "開設予定年度": {
+      "type": "string"
+    },
+    "大学等区分": {
+      "type": "string"
+    },
+    "区分": {
+      "type": "string"
+    },
+    "大学等名": {
+      "type": "string"
+    },
+    "学部学科等名": {
+      "type": "string"
+    },
+    "入学定員": {
+      "type": "string"
+    },
+    "位置": {
+      "type": "string"
+    },
+    "設置者": {
+      "type": "string"
+    },
+    "附帯事項": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "附帯事項": {
+            "type": "string"
+          },
+          "附帯事項区分": {
+            "type": "string"
+          }
+        },
+        "required": ["附帯事項", "附帯事項区分"]
+      }
+    },
+    "備考": {
+      "type": ["string", "null"]
+    }
+  },
+  "required": ["開設予定大学等", "開設予定年度", "大学等区分", "区分", "大学等名", "学部学科等名", "入学定員", "位置", "設置者", "附帯事項", "備考"]
+}
