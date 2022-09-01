@@ -11,17 +11,19 @@
 - [2022-08 CSV](https://codeforkosen.github.io/newcollege/newcollege202208.csv) [附帯事項](https://codeforkosen.github.io/newcollege/newcollege202208-notes.csv)
 - [2022-08 JSON](https://codeforkosen.github.io/newcollege/newcollege202208.json) ([JSON Schema](newcollege.schema.json), [d.ts](NewCollege.d.ts))
 
-## How to Build
+## 開発者向け情報
+
+### How to make JSON
 
 1. [令和5年度開設予定の大学等 答申内容【判定を｢可｣とするもの】 オープンデータ 文部科学省より](https://codeforkosen.github.io/newcollege/)のPDFをCSV化する
 2. deno run -A makejson.js で、CSVからJSONをつくる
 
-## How to make type
+### How to make type
 
 1. [JSON Schema](https://json-schema.org/)でスキーマ [newcollege.schema.json](newcollege.schema.json) をつくる
 2. deno run -A makedts.js で、TypeScript型定義ファイルをつくる
 
-## Test
+### Test
 
 1. deno run -A check.ts で、TypeScript型定義ファイルをチェック
 2. deno run -A validate.js で、JSON Schema の適合性をチェック
